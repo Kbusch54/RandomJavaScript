@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+</head>
+<body>
+	<div id="yes"></div>
+	<div id="no"></div>
+	<div id="maybe"></div>
+	<script type="text/javascript">
+		//initializing array and filling with all ones
+		var myData = [];
+		myData.length = 10;
+		for (var i = 0; i < myData.length; i++) {
+			myData[i] = 1;
+		}
+		for (var j = 0; j < myData.length; j++) {
+			console.log(myData[j] + "a")
+			yes.innerHTML += (myData[j] + " , ");
+		}
+
+		// initializing prompt variables
+		var userNum = 0;
+		var userInput;
+
+		//prompting user for index and value
+		do {
+			userNum = prompt("Enter the index in which you would like to add to the array");
+			if (userNum > myData.length) {
+				break;
+			}
+			userInput = prompt("Enter the value at specified index");
+			myData[userNum] = userInput;
+
+			//printing array
+			for (i = 0; i < myData.length; i++) {
+				console.log(myData[i])
+				no.innerHTML += myData[i] + " , ";
+			}
+			no.innerHTML += "<br>"
+		} while (userNum > 0 || userNum < 11)
+	</script>
+
+</body>
+</html>

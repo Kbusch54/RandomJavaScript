@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zippy the Wunder Programmer</title>
+</head>
+<body>
+<div id="output"></div>
+<div id="yes"></div>
+<div id="no"></div>
+	<script type="text/javascript">
+		output.innerHTML = "Hello World!!";
+		console.log("whatya tink?");
+		
+		var rate=5;
+		var initialBalance = 10000;
+		var target= 2*initialBalance;
+		var balance= initialBalance;
+		var year= 0;
+		while(balance<target){
+			var interest= balance*rate/100;
+			balance=balance+interest;
+			year++;
+		}
+		console.log("The investment doubled in "+year+" years!")
+		
+		var x =12;
+		var y=32;
+		if(x<=y){
+			console.log("hi friends")
+		}else {
+			console.log("bye losers")
+		}
+		for(i=0;i<34;i++){
+			console.log("bye bye"+i)
+		}
+		
+		for(var j=0; j<=100; j++){
+			if(j%2==0){
+				console.log("even "+j)
+			}else{
+				console.log("odd "+j)
+			}
+		}
+		var counter =0;
+		var st="****************##*****#*******###******##*#***##*****#####****#**##*****";
+		var i=-1;
+		while(++i<st.length){
+			if(st[i]==="#"){
+				counter++	
+			}else{
+				if(counter>=4){
+					break;		
+				}else{
+					if(counter>0){
+				console.log(counter)
+					}
+					counter=0;
+				}
+			}
+		}
+		console.log(counter);
+		yes.innerHTML = "There are " +counter + " consecutive #'s in a row and it ended at the "+i+"th position";
+		
+		var s="*#**************##*****#*******###******##*#***##*****####****#**##*****";
+		var count=0;
+		var j=-1;
+		while(++j<s.length){
+
+			if(s[j]==="*"){
+				continue
+			}	
+			count++
+		}
+		no.innerHTML="There are "+ count+" #'s in this string"; 
+		
+		
+	</script>
+
+
+</body>
+</html>

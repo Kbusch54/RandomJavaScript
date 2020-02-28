@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>valid</title>
+</head>
+<body>
+<div id="output"></div>
+
+	<script  type="text/javascript">
+		var newNum =0;
+		var count =0;
+		var num = prompt("Please enter in number between 1 and 100: ");
+		while(num>100||num<1){
+			switch(count){
+			case 0:
+				num=prompt("Please re-enter number");
+			count++;
+			break;
+			case 1:
+				num=prompt("Dude come on not that hard");
+				count++;
+				break;
+			case 2:
+				num=prompt("Okay now youre messing with me NOT FUNNY ANYMORE");
+				count++;
+				break;
+			case 3:
+				num=prompt("Thats it one more time I DARE YOU!!!")
+							count=0;
+				break;
+				
+			}
+			
+		
+		}
+			newNum=num*num;
+			output.innerHTML=("Your number squared is "+ newNum);
+			
+			
+			
+			
+			
+			
+	</script>
+
+</body>
+</html>

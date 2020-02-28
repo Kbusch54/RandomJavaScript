@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form id="frm1" action="/book">
+		<label for="title">Title</label> <input type="text" id="title"
+			name="Title" placeholder="Book Title"> <label for="author">Author</label>
+		<input type="text" id="author" name="Author" placeholder="Author">
+		<input onclick="myFunction()" name="submit" type="submit" value="submit" />
+	<button type="button" onclick="myFunction()">Try it</button>
+	</form>
+	<p id="hello"></p>
+	<table id="myTable">
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Genre</th>
+		</tr>
+		<tr>
+			<td>Harry Potter</td>
+			<td>J.K. Rowling</td>
+			<td>Fantasy</td>
+		</tr>
+		<tr>
+			<td>Row3 cell1</td>
+			<td>Row3 cell2</td>
+			<td>Row3 cell3</td>
+		</tr>
+	</table>
+	<br>
+
+
+	<script type="text/javascript">
+		//book
+		function Book(title, author, genre) {
+			this.title = title;
+			this.author = author;
+			this.genre = genre;
+			this.getDetails = function() {
+				return this.title + " written by " + this.author
+						+ " and this book is " + this.genre;
+			}
+			this.getTitle = function() {
+				return this.title;
+			}
+		}
+		var hp = new Book("Star", "J.K. Rowling", "Mystery");
+		var book = new Book("Harry p", "Peter King", "Fantasy");
+		alert(book.getDetails());
+		console.log(hp);
+		document.getElementById("hello").innerHTML = hp.getDetails();
+		console.log(hp.getTitle);
+
+		//movie
+		function Movie(title, genre, releaseDate, cast) {
+			this.title = title;
+			this.genre = genre;
+			this.releaseDate = releaseDate;
+			this.cast = cast;
+			this.getDetails = function() {
+				return this.title + " released on " + this.releaseDate
+						+ " is a " + this.genre + " movie with " + this.cast;
+			}
+		}
+		var st = new Movie("star wars", "SciFi", "12/22/77");
+		alert(st.getDetails());
+		console.log(st);
+
+		//video game
+		function VideoGame(title, genre, releaseDate, developer, platform) {
+			this.title = title;
+			this.genre = genre;
+			this.releaseDate = releaseDate;
+			this.developer = developer;
+			this.platform = platform;
+			this.getDetails = function() {
+				return this.title + " was released on " + this.releaseDate
+						+ " by the " + this.developer + " team. " + " it is a "
+						+ this.genre + " on " + this.platform;
+			}
+		}
+		var halo = new VideoGame("Halo", "first person shooter", "09/12/01",
+				"Bungie", "XBOX");
+		alert(halo.getDetails());
+		console.log(halo);
+
+		//table method
+		function myFunction() {
+			var x = document.getElementsByTagName("label").namedItem("title").value;
+			var y = document.getElementsByTagName("label").namedItem("author").value;
+			var table = document.getElementById("myTable");
+			var row = table.insertRow(1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML = x;
+			cell2.innerHTML = y;
+			cell3.innerHTML = "dhh";
+		}
+	</script>
+</body>
+</html>

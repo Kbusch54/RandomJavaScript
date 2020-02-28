@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function isNumber(str){
+		if( isNaN(str)){
+			console.log(false)
+		}else {
+			console.log(true) 
+		}
+	}
+	function convertToNumber(str){
+		if(str.includes(".")){
+		console.log(parseFloat(str)+" is a float")
+		}else{	
+		console.log(parseInt(str)+" is an integer")
+		}
+	}
+	var userNum=prompt("Enter a string to see if it is a number");
+	isNumber(userNum);
+
+	var userInput=prompt("Enter a string to see it returned as number or float");
+	convertToNumber(userInput);
+
+
+
+
+</script>
+
+</body>
+</html>
